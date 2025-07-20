@@ -8,14 +8,12 @@ import (
 )
 
 func getRand() (int64, error) {
-	n := big.NewInt(15)
-
-	nRand, err := rand.Int(rand.Reader, n)
+	n, err := rand.Int(rand.Reader, big.NewInt(15))
 	if err != nil {
 		return 0, err
 	}
 
-	return nRand.Int64() + 1, nil
+	return n.Int64() + 1, nil
 }
 
 func main() {
