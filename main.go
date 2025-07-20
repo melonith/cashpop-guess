@@ -27,7 +27,7 @@ func main() {
 		nums[key] = n
 	}
 
-	for key, val := range nums {
-		fmt.Printf("%10s: %2d\n", key, val)
+	for _, key := range keys {
+		fmt.Printf("%10s: %2d\n", key, nums[key])
 	}
 }
